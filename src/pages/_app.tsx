@@ -7,6 +7,8 @@ import {CacheProvider, EmotionCache} from "@emotion/react";
 import theme from "../config/theme";
 import createEmotionCache from "../config/createEmotionCache";
 
+import {SWRDevTools} from "swr-devtools";
+
 import {wrapper} from "../redux/store";
 import {Provider} from "react-redux";
 
@@ -21,21 +23,23 @@ function MyApp({Component, ...rest}) {
 	const {store, props} = wrapper.useWrappedStore(rest);
 	const {emotionCache = clientSideEmotionCache, pageProps} = props;
 	return (
-		<Provider store={store}>
-			<CacheProvider value={emotionCache}>
-				<Head>
-					<meta
-						name="viewport"
-						content="initial-scale=1, width=device-width"
-					/>
-				</Head>
-				<ThemeProvider theme={theme}>
-					{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-					<CssBaseline />
-					<Component {...pageProps} />
-				</ThemeProvider>
-			</CacheProvider>
-		</Provider>
+		<SWRDevTools>
+			<Provider store={store}>
+				<CacheProvider value={emotionCache}>
+					<Head>
+						<meta
+							name="viewport"
+							content="initial-scale=1, width=device-width"
+						/>
+					</Head>
+					<ThemeProvider theme={theme}>
+						{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+						<CssBaseline />
+						<Component {...pageProps} />
+					</ThemeProvider>
+				</CacheProvider>
+			</Provider>
+		</SWRDevTools>
 	);
 }
 
