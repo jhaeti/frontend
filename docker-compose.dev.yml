@@ -1,0 +1,23 @@
+version: "2"
+
+services:
+    frontend:
+        container_name: frontend
+        build:
+            context: ./
+            dockerfile: dev.Dockerfile
+        image: next-dev-app
+        # environment:
+        #   ENV_VARIABLE: ${ENV_VARIABLE}
+        #   NEXT_PUBLIC_ENV_VARIABLE: ${NEXT_PUBLIC_ENV_VARIABLE}
+        volumes:
+            - ./src:/app/src
+            - ./public:/app/public
+            - /app/node_modules
+        restart: always
+        ports:
+            - 3000:3000
+    # Add more containers below (nginx, postgres, etc.)
+# Define a network, which allows containers to communicate
+# with each other, by using their container name as a hostname
+
