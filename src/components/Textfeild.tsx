@@ -1,6 +1,4 @@
-import Textfield from "@mui/material/TextField";
+import Textfield from '@mui/material/TextField';
 
-const Input = () => {
-	return <Textfield variant="outlined" label="Something cool" />;
-};
+const Input = () => <Textfield variant='outlined' label='Something cool' />;
 export default Input;

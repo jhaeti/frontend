@@ -1,19 +1,17 @@
-import { TextField } from "@mui/material";
-import { useField } from "formik";
+import { TextField } from '@mui/material';
+import { useField } from 'formik';
 
 const MyCheckbox = (props) => {
     // React treats radios and checkbox inputs differently other TextField types, select, and textarea.
     // Formik does this too! When you specify `type` to useField(), it will
     // return the correct bag of props for you -- a `checked` prop will be included
     // in `field` alongside `name`, `value`, `onChange`, and `onBlur`
-    const [field, meta] = useField({ ...props, type: "checkbox" });
+    const [field, meta] = useField({ ...props, type: 'checkbox' });
     return (
         <div>
-                <TextField type="checkbox" {...field} {...props} />
-                {props.children}
-            {meta.touched && meta.error ? (
-                <div className="error">{meta.error}</div>
-            ) : null}
+            <TextField type='checkbox' {...field} {...props} />
+            {props.children}
+            {meta.touched && meta.error ? <div className='error'>{meta.error}</div> : null}
         </div>
     );
 };

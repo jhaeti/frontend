@@ -1,6 +1,7 @@
-import {useDispatch, useSelector} from "react-redux";
-import type {TypedUseSelectorHook} from "react-redux";
-import type {RootState, AppDispatch} from ".";
+import { useDispatch, useSelector } from 'react-redux';
+// eslint-disable-next-line no-duplicate-imports
+import type { TypedUseSelectorHook } from 'react-redux';
+import type { RootState, AppDispatch } from '.';
 
 // export const useAppDispatch = () => useDispatch<AppDispatch>();
 
