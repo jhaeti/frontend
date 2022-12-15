@@ -46,6 +46,7 @@
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-react": "latest",
         "prettier": "^2.8.0",
+        "storybook-addon-material-ui": "^0.9.0-alpha.24",
         "typescript": "*"
     },
     "resolutions": {
