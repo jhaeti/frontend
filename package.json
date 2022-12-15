@@ -57,6 +57,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
+        "create-network": "docker network create service || true",
         "build:docker": "docker compose -f docker-compose.dev.yml build",
         "start:docker": "docker compose -f docker-compose.dev.yml up",
         "stop:docker": "docker compose -f docker-compose.dev.yml down",
