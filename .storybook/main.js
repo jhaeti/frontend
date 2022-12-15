@@ -7,6 +7,9 @@ module.exports = {
         'storybook-addon-material-ui',
     ],
     framework: '@storybook/react',
+    features: {
+        emotionAlias: false,
+    },
     core: {
         builder: '@storybook/builder-webpack5',
     },

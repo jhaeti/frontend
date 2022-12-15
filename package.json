@@ -60,8 +60,8 @@
         "build:docker": "docker compose -f docker-compose.dev.yml build",
         "start:docker": "docker compose -f docker-compose.dev.yml up",
         "stop:docker": "docker compose -f docker-compose.dev.yml down",
-        "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "storybook": "start-storybook -p 6006 -s ./public",
+        "build-storybook": "build-storybook -s public"
     },
     "volta": {
         "node": "18.12.1"
