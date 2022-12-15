@@ -34,7 +34,8 @@
         "implicit-arrow-linebreak": "off",
         "no-param-reassign": "off",
         "no-plusplus": "off",
-        "function-paren-newline": "off"
+        "function-paren-newline": "off",
+        "import/no-extraneous-dependencies": "off"
     },
     "settings": {
         "import/resolver": {
