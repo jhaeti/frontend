@@ -1,5 +1,6 @@
 import React from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
+import GlobalStyle from '../src/config/style';
 
 import theme from '../src/config/theme';
 
@@ -7,6 +8,7 @@ export const decorators = [
     (Story) => (
         <ThemeProvider theme={theme}>
             <CssBaseline />
+            <GlobalStyle />
             <Story />
         </ThemeProvider>
     ),

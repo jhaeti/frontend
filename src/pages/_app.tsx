@@ -10,6 +10,7 @@ import theme from '../config/theme';
 import createEmotionCache from '../config/createEmotionCache';
 
 import { wrapper } from '../redux/store';
+import GlobalStyle from '../config/style';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -31,6 +32,7 @@ function MyApp({ Component, ...rest }: MyAppProps) {
                     </Head>
                     <ThemeProvider theme={theme}>
                         <CssBaseline />
+                        <GlobalStyle />
                         <Component {...pageProps} />
                     </ThemeProvider>
                 </CacheProvider>
