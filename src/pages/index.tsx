@@ -1,24 +1,9 @@
-import styled from 'styled-components';
+import Home from '../components/Home';
 
-const Wrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-`;
+const index = () => (
+    <div>
+        <Home />
+    </div>
+);
 
-const Title = styled.h1`
-    text-align: center;
-    color: palevioletred;
-`;
-const homepage = () => {
-    const str = 'Welcome to my boilerplate app';
-    return (
-        <Wrapper>
-            <Title>{str}</Title>
-        </Wrapper>
-    );
-};
-
-export default homepage;
+export default index;
